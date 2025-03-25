@@ -198,7 +198,7 @@
                   <a href="contact.html" class="btn-default">get in touch</a>
                   <a
                     href="book-appointment.html"
-                    class="btn-default btn-highlighted"
+                    class="d-none btn-default btn-highlighted"
                     >explore more</a
                   >
                 </div>
@@ -1092,7 +1092,7 @@
     <!-- Our Expertise Section End -->
 
     <!-- Intro Video Section Start -->
-    <div class="intro-video bg-section parallaxie">
+    <div class="intro-video bg-section parallaxie d-none">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-8">
@@ -2111,6 +2111,160 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Modal -->
+    <div id="enroll-modal" class="modal">
+      <div class="modal-content">
+        <div class="contact-us-form">
+          <!-- Contact Us Title Start -->
+          <div class="contact-us-title">
+            <h3 class="" style="visibility: visible; animation-name: fadeInUp">
+              Enroll Now!
+            </h3>
+            <p
+              class=""
+              data-wow-delay="0.2s"
+              style="
+                visibility: visible;
+                animation-delay: 0.2s;
+                animation-name: fadeInUp;
+              "
+            >
+              Unlock your potential with expert guidance! Book a free
+              consultation for your NEET success.
+            </p>
+          </div>
+          <!-- Contact Us Title End -->
+
+          <!-- Contact Us Form Start -->
+          <form
+            id="contactForm"
+            name="submit-to-google-sheet"
+            action="#"
+            method="POST"
+            data-toggle="validator"
+            class=""
+            data-wow-delay="0.4s"
+            novalidate="true"
+            style="
+              visibility: visible;
+              animation-delay: 0.4s;
+              animation-name: fadeInUp;
+            "
+          >
+            <div class="row">
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="text"
+                  name="FirstName"
+                  class="form-control"
+                  id="fname"
+                  placeholder="First Name"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="text"
+                  name="LastName"
+                  class="form-control"
+                  id="lname"
+                  placeholder="Last Name"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="email"
+                  name="Email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email Address"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="text"
+                  name="Phone"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Phone Number"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <div class="form-group col-md-12 mb-5">
+                <textarea
+                  name="Message"
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Message"
+                ></textarea>
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <input
+                type="text"
+                name="Location"
+                value=""
+                id="CurrLocation"
+                class="hidden"
+              />
+
+              <div class="col-lg-12">
+                <div class="contact-form-btn" style="justify-content: center">
+                  <button type="submit" class="btn-default disabled">
+                    submit message
+                  </button>
+                  <span class="loading-animation hidden">
+                    <script
+                      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                      type="module"
+                    ></script>
+                    <dotlottie-player
+                      src="https://lottie.host/514e46d2-4b07-4f17-a862-38eed7be6f84/BJfo2dubXf.lottie"
+                      background="transparent"
+                      speed="1"
+                      style="width: 50px; height: 50px"
+                      direction="1"
+                      playmode="normal"
+                      loop=""
+                      autoplay=""
+                    ></dotlottie-player>
+                  </span>
+                  <div id="msgSubmit" class="h3 hidden">
+                    Thanks for the submission, We will get back to you soon...
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- Contact Us Form End -->
+        </div>
+        <button class="close-modal-btn">Close</button>
+      </div>
+    </div>
+
+    <script>
+      const crossBtnHomePage = document.querySelector(".close-modal-btn");
+
+      setTimeout(() => {
+        document.querySelector("#enroll-modal").classList.add("show");
+      }, 3000);
+
+      crossBtnHomePage.addEventListener("click", () => {
+        document.querySelector("#enroll-modal").classList.remove("show");
+      });
+    </script>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
