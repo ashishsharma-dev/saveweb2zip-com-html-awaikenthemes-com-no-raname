@@ -39,6 +39,27 @@
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen" />
   </head>
+  <style>
+    .modal.show .modal-content{
+      height: 600px;
+    overflow-y: scroll;
+    position: relative;
+    }
+
+    .close-modal-btn{
+     
+      position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
+    padding: 0!important;
+    border-radius: 50%;
+    }
+
+    
+  </style>
   <body>
     <!-- Preloader Start -->
     <div class="preloader">
@@ -269,9 +290,9 @@
             <!-- Service Single Content Start -->
             <div class="service-single-content">
               <!-- Service Featured Image Start -->
-              <div class="service-featured-image">
+              <div class="service-featured-image d-none">
                 <figure class="image-anime reveal">
-                  <img src="images/course-image.jpg" alt="" />
+                  <img src="images/2150911487.jpg" alt="" />
                 </figure>
               </div>
               <!-- Service Featured Image End -->
@@ -343,7 +364,7 @@
                 <!-- Service Entry Img Start -->
                 <div class="service-entry-img">
                   <figure class="image-anime reveal">
-                    <img src="images/2148519764.jpg" alt="" />
+                    <img src="images/2150911487.jpg" alt="" />
                   </figure>
                 </div>
                 <!-- Service Entry Img End -->
@@ -841,72 +862,183 @@ A passionate zoology expert skilled at simplifying complex concepts for students
               
 
 
-              <!-- Modal -->
+           <!-- Modal -->
     <div id="enroll-modal" class="modal">
       <div class="modal-content">
-          <div class="contact-us-form">
-            <!-- Contact Us Title Start -->
-            <div class="contact-us-title">
-              <h3 class="" style="visibility: visible; animation-name: fadeInUp;">send a message</h3>
-              <p class="" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                Unlock your potential with expert guidance! Book a free
-                consultation for your NEET success.
-              </p>
-            </div>
-            <!-- Contact Us Title End -->
+        <span class="close-modal-btn">&times;</span>
+        <div class="contact-us-form">
+          <!-- Contact Us Title Start -->
+          <div class="contact-us-title">
+            <h3 class="" style="visibility: visible; animation-name: fadeInUp">
+              Enroll Now!
+            </h3>
+            <p
+              class=""
+              data-wow-delay="0.2s"
+              style="
+                visibility: visible;
+                animation-delay: 0.2s;
+                animation-name: fadeInUp;
+              "
+            >
+              Unlock your potential with expert guidance! Book a free
+              consultation for your NEET success.
+            </p>
+          </div>
+          <!-- Contact Us Title End -->
 
-            <!-- Contact Us Form Start -->
-            <form id="contactForm" name="submit-to-google-sheet" action="#" method="POST" data-toggle="validator" class="" data-wow-delay="0.4s" novalidate="true" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-              <div class="row">
-                <div class="form-group col-md-6 mb-4">
-                  <input type="text" name="FirstName" class="form-control" id="fname" placeholder="First Name" required="">
-                  <div class="help-block with-errors"></div>
-                </div>
+          <!-- Contact Us Form Start -->
+          <form
+            id="contactForm"
+            name="submit-to-google-sheet"
+            action="#"
+            method="POST"
+            data-toggle="validator"
+            class=""
+            data-wow-delay="0.4s"
+            novalidate="true"
+            style="
+              visibility: visible;
+              animation-delay: 0.4s;
+              animation-name: fadeInUp;
+            "
+          >
+            <div class="row">
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="text"
+                  name="FirstName"
+                  class="form-control"
+                  id="fname"
+                  placeholder="First Name"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
 
-                <div class="form-group col-md-6 mb-4">
-                  <input type="text" name="LastName" class="form-control" id="lname" placeholder="Last Name" required="">
-                  <div class="help-block with-errors"></div>
-                </div>
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="text"
+                  name="LastName"
+                  class="form-control"
+                  id="lname"
+                  placeholder="Last Name"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
 
-                <div class="form-group col-md-6 mb-4">
-                  <input type="email" name="Email" class="form-control" id="email" placeholder="Email Address" required="">
-                  <div class="help-block with-errors"></div>
-                </div>
+              <div class="form-group col-md-6 mb-4 d-none">
+                <input
+                  type="email"
+                  name="Email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email Address"
+                />
+                <div class="help-block with-errors"></div>
+              </div>
 
-                <div class="form-group col-md-6 mb-4">
-                  <input type="text" name="Phone" class="form-control" id="phone" placeholder="Phone Number" required="">
-                  <div class="help-block with-errors"></div>
-                </div>
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="number"
+                  name="Age"
+                  class="form-control"
+                  id="age"
+                  placeholder="Age"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
 
-                <div class="form-group col-md-12 mb-5">
-                  <textarea name="Message" class="form-control" id="message" rows="4" placeholder="Message"></textarea>
-                  <div class="help-block with-errors"></div>
-                </div>
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="text"
+                  name="Gender"
+                  class="form-control"
+                  id="gender"
+                  placeholder="Gender"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
 
-                <input type="text" name="Location" value="" id="CurrLocation" class="hidden">
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="text"
+                  name="Class"
+                  class="form-control"
+                  id="class"
+                  placeholder="Class"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
 
-                <div class="col-lg-12">
-                  <div class="contact-form-btn" style="justify-content: center;">
-                    <button type="submit" class="btn-default disabled">
-                      submit message
-                    </button>
-                    <span class="loading-animation hidden">
-                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-                      <dotlottie-player src="https://lottie.host/514e46d2-4b07-4f17-a862-38eed7be6f84/BJfo2dubXf.lottie" background="transparent" speed="1" style="width: 50px; height: 50px" direction="1" playmode="normal" loop="" autoplay=""></dotlottie-player>
-                    </span>
-                    <div id="msgSubmit" class="h3 hidden">
-                      Thanks for the submission, We will get back to you
-                      soon...
-                    </div>
+              <div class="form-group col-md-6 mb-4">
+                <input
+                  type="text"
+                  name="Phone"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Phone Number"
+                  required=""
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <div class="form-group col-md-12 mb-5">
+                <textarea
+                  name="Message"
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Message"
+                ></textarea>
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <input
+                type="text"
+                name="Location"
+                value=""
+                id="CurrLocation"
+                class="hidden"
+              />
+
+              <div class="col-lg-12">
+                <div class="contact-form-btn" style="justify-content: center">
+                  <button type="submit" class="btn-default disabled">
+                    submit message
+                  </button>
+                  <span class="loading-animation hidden">
+                    <script
+                      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                      type="module"
+                    ></script>
+                    <dotlottie-player
+                      src="https://lottie.host/514e46d2-4b07-4f17-a862-38eed7be6f84/BJfo2dubXf.lottie"
+                      background="transparent"
+                      speed="1"
+                      style="width: 50px; height: 50px"
+                      direction="1"
+                      playmode="normal"
+                      loop=""
+                      autoplay=""
+                    ></dotlottie-player>
+                  </span>
+                  <div id="msgSubmit" class="h3 hidden">
+                    Thanks for the submission, We will get back to you soon...
                   </div>
                 </div>
               </div>
-            </form>
-            <!-- Contact Us Form End -->
-          </div>
-          <button class="close-modal-btn">Close</button>
+            </div>
+          </form>
+          <!-- Contact Us Form End -->
+        </div>
+        <!-- <button class="close-modal-btn">Close</button> -->
       </div>
-  </div>
+    </div>
 
               <!-- Our FAQs Section Start -->
               <div class="our-faq-section service-faqs-section">
@@ -1350,5 +1482,12 @@ A passionate zoology expert skilled at simplifying complex concepts for students
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
     <script src="js/theme-panel.js"></script>
+
+    <script>
+      let neetModal = document.querySelector("#enroll-modal");
+      document.addEventListener('DOMContentLoaded', (e)=>{
+        neetModal.style.dispaly = 'none'
+      })
+    </script>
   </body>
 </html>

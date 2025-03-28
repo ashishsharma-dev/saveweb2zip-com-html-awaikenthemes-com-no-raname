@@ -3326,7 +3326,8 @@ header.main-header .header-sticky.active .container-fluid::before {
 .service-entry-img img {
   border-radius: 20px;
   width: 100%;
-  aspect-ratio: 1 / 0.5;
+  /* aspect-ratio: 1 / 0.5; */
+  aspect-ratio: 21/9;
   object-fit: cover;
 }
 
@@ -6207,6 +6208,7 @@ ul .list-style:nth-of-type(1) {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  display: none;
 }
 
 /* Modal box */
@@ -6220,10 +6222,19 @@ ul .list-style:nth-of-type(1) {
   transition: transform 0.3s ease-in-out;
 }
 
+@media (max-width: 767px) {
+  .modal-content {
+    max-width: 98%;
+    height: 90vh;
+    overflow-y: scroll;
+  }
+}
+
 /* Show modal effect */
 .modal.show {
   opacity: 1;
   visibility: visible;
+  display: flex !important;
 }
 
 .modal.show .modal-content {
@@ -6239,4 +6250,7 @@ ul .list-style:nth-of-type(1) {
   cursor: pointer;
   border-radius: 5px;
   margin-top: 10px;
+}
+.company-client-images {
+  display: none;
 }
