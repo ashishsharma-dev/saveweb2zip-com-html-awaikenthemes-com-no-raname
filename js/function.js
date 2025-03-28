@@ -284,7 +284,7 @@ const scriptURL =
 const form = document.forms["submit-to-google-sheet"];
 const message = document.getElementById("msgSubmit");
 const currLocation = document.getElementById("CurrLocation");
-const closeBtn = document.querySelector(".close-btn");
+const closeBtn = document.querySelector(".close-modal-btn");
 const submitBtn = document.querySelector(
   ".contact-form-btn button[type='submit']"
 );
@@ -305,7 +305,9 @@ if (form) {
         submitBtn.disabled = false;
         loadingAnimation.classList.add("hidden");
         if (closeBtn) {
-          closeBtn.click();
+          setTimeout(() => {
+            closeBtn.click();
+          }, 1500);
         }
         form.reset();
         setTimeout(() => {
