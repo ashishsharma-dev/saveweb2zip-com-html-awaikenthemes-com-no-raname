@@ -342,3 +342,10 @@ window.addEventListener("click", (event) => {
     modal.classList.remove("show");
   }
 });
+
+// Vertical Scroller
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.getElementById("slider");
+  const clonedItems = slider.innerHTML;
+  slider.innerHTML += clonedItems; // Duplicate items for infinite scrolling
+});
