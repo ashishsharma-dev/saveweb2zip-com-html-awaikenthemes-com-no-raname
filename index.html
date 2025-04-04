@@ -2645,11 +2645,21 @@
     </div>
 
     <script>
+      // window.addEventListener("load", (e) => {
+      //   window.scrollY = 0;
+      // });
       const crossBtnHomePage = document.querySelector(".close-modal-btn");
 
-      setTimeout(() => {
-        document.querySelector("#enroll-modal").classList.add("show");
-      }, 3000);
+      // setTimeout(() => {
+      //   document.querySelector("#enroll-modal").classList.add("show");
+      // }, 3000);
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY >= 4000) {
+          document.querySelector("#enroll-modal").classList.add("show");
+          window.removeEventListener("scroll", arguments.callee); // Remove listener after logging
+        }
+      });
 
       crossBtnHomePage.addEventListener("click", () => {
         document.querySelector("#enroll-modal").classList.remove("show");
